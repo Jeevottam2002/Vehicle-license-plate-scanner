@@ -1,0 +1,78 @@
+Vehicle License Plate Scanner
+
+Overview
+
+This project detects and recognizes vehicle license plates from an image using OpenCV for image processing and Tesseract OCR for character recognition. The script processes the image, extracts the license plate region, and retrieves the alphanumeric text using OCR.
+
+Features
+
+Automatic license plate detection using contour approximation.
+
+Image preprocessing with grayscale conversion, edge detection, and thresholding.
+
+Optical Character Recognition (OCR) with Tesseract to extract plate numbers.
+
+Visual output with the detected plate highlighted and the extracted text displayed.
+
+Requirements
+
+Make sure you have the following dependencies installed:
+
+Python 3.x
+
+OpenCV (cv2)
+
+Pytesseract (Tesseract-OCR)
+
+Install Dependencies
+
+pip install opencv-python pytesseract
+
+Install Tesseract-OCR
+
+Download and install Tesseract-OCR from: Tesseract Download
+
+Set the Tesseract path in your script:
+
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+Usage
+
+Place the image (photo.jpeg) of the vehicle containing the license plate in the project folder.
+
+Run the script:
+
+python license_plate_scanner.py
+
+The detected license plate will be displayed along with the extracted text.
+
+Code Breakdown
+
+Load the image
+
+Convert to grayscale
+
+Apply edge detection (Canny)
+
+Find contours and filter potential plates
+
+Extract and preprocess the license plate region
+
+Perform OCR to extract text
+
+Display the detected plate and text
+
+Possible Improvements
+
+Improve OCR accuracy with adaptive thresholding and noise reduction.
+
+Use deep learning models (YOLO, SSD) for better plate detection.
+
+Extend functionality for video streams and real-time processing.
+
+License
+
+This project is open-source and available for personal and educational use.
+
+Note: This is an acedamic project further real time license plate detection can be added
+
